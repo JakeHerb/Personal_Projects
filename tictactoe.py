@@ -12,7 +12,7 @@ def show_board():
 #Asks where youd like to go, replaces that spot with an X
 def player_turn():
     turn_over = False
-    while turn_over == False
+    while turn_over == False:
         input = raw_input("Choose your spot: ")
         input = int(input)
         if board[input] == "X" or board[input] == "O":
