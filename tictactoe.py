@@ -13,13 +13,13 @@ def show_board():
 def player_turn():
     turn_over = False
     while turn_over == False:
-        input = raw_input("Choose your spot: ")
-        input = int(input)
-        if board[input] == "X" or board[input] == "O":
+        inpt = raw_input("Choose your spot: ")
+        inpt = int(inpt)
+        if board[inpt] == "X" or board[inpt] == "O":
             print "You can't go there."
             
         else:
-                board[input] = ("X")
+                board[inpt] = ("X")
                 turn_over = True
 
 #computer chooses a random spot, if not open, chooses again til open
@@ -38,7 +38,7 @@ def comp_turn():
 
 #checks if 3 given spots are owned by the same player        
 def check_line(letter, spot1, spot2, spot3):
-    if letter == board[spot1] and letter == board[spot3] and letter == board[spot3]:
+    if letter == board[spot1] and letter == board[spot2] and letter == board[spot3]:
         win_check = True
         return win_check
     else:
